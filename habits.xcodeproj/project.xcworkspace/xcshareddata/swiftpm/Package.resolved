@@ -1,0 +1,15 @@
+{
+  "originHash" : "ec10b1ce8da4134f9b47845bbe5929f0fc61170631a3b5adac4b320556671418",
+  "pins" : [
+    {
+      "identity" : "axiscontribution",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jasudev/AxisContribution.git",
+      "state" : {
+        "revision" : "dd794264fe7f4c265e05bc0867370ed587e27279",
+        "version" : "0.5.0"
+      }
+    }
+  ],
+  "version" : 3
+}
