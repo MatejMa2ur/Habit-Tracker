@@ -1,9 +1,9 @@
-    //
-    //  HabitView.swift
-    //  habits
-    //
-    //  Created by Matej Mazur on 21/05/2024.
-    //
+//
+//  HabitView.swift
+//  habits
+//
+//  Created by Matej Mazur on 21/05/2024.
+//
 
 import SwiftUI
 import SwiftData
@@ -19,6 +19,23 @@ struct HabitView: View {
     
     var body: some View {
         VStack {
+            GeometryReader { geometry in
+                if geometry.size.width > 700 {
+                    
+                    YearView(item: item)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    
+                } else if geometry.size.width > 400{
+                    
+                    MonthView(item: item)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                
+                } else {
+                    WeekView(item: item)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                
+                }
+            }
             List {
                 Section(header: Text("Dates")) {
                     if let events = item.events {

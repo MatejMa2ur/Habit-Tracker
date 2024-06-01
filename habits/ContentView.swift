@@ -18,7 +18,9 @@ struct ContentView: View {
                 List {
                     ForEach(items) { item in
                         NavigationLink {
-                            HabitView(item: item)
+                            withAnimation{
+                                HabitView(item: item)
+                            }
                         } label: {
                             HabitViewEditName(item: item)
                         }
@@ -28,7 +30,7 @@ struct ContentView: View {
                 .navigationSplitViewColumnWidth(min: 180, ideal: 200)
                 .safeAreaInset(edge: .bottom) {
                     Button(action: { addItem() }, label: {
-                        Label("Add Group", systemImage: "plus.circle")
+                        Label("Add Habit", systemImage: "plus.circle")
                     })
                     .buttonStyle(.borderless)
                     .foregroundColor(.accentColor)
